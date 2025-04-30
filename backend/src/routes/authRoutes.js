@@ -9,6 +9,10 @@ const generateAuthToken = (userId) => {
   return jwt.sign({ userId }, process.env.JWT_SECRET, { expiresIn: "15d" });
 };
 
+//---------------------REGISTER------------------------------
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+
 
 router.post("/register", async (req, res) => {
   // Handle login logic here
@@ -65,6 +69,12 @@ router.post("/register", async (req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 });
+
+
+//-------------------LOGIN------------------------------
+//------------------------------------------------------
+//------------------------------------------------------
+
 
 router.post("/login", async (req, res) => {
   try {

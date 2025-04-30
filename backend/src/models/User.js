@@ -22,7 +22,10 @@ const userSchema = new mongoose.Schema({
     profileImage: {
         type: String,
         default: ""
-    }});
+    }
+},{timestamps: true}
+
+);
 
     // hash password before saving user to database
 userSchema.pre("save", async function (next) {
