@@ -10,4 +10,4 @@ export const connectDB = async () => {
         //NOTE - 1 exit with failure
         //NOTE - 0 exit with success
     }
-    }
+}
